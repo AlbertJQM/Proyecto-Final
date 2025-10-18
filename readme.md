@@ -2,21 +2,27 @@
 ### Módulo 1 - Fundamentos de la Ingeniería del Software para Científicos de Datos
 
 Integrantes:
-1. Franco Villalta
-2. Albert Jhonatan Quisbert Mújica
-3. Luis Fernando Fernandez 
+1. Luis Fernando Fernandez Quispe
+2. Jhonn Hinojosa
+3. Albert Jhonatan Quisbert Mújica
+4. Franco Villalta
 
 Este proyecto es una aplicación de escritorio desarrollada en Python que permite la gestión, visualización y análisis de imágenes médicas orientadas a la detección de glaucoma. Utiliza una arquitectura Modelo-Vista-Controlador (MVC) y una interfaz gráfica intuitiva basada en Tkinter.
 
 ## Estructura del Proyecto
 
 - **main.py**: Punto de entrada de la aplicación. Inicializa la interfaz gráfica.
-- **models/**: Contiene los módulos relacionados con la lógica de negocio y la gestión de imágenes.
+- **models/**: Contiene los módulos relacionados con la lógica de negocio y la gestión de imágenes (ver Diagrama de Clases).
 - **utils.py**: Funciones auxiliares para el procesamiento y manejo de datos.
 - **config.py**: Configuración global del proyecto.
 - **images/**: Carpeta con el dataset de imágenes médicas, organizado en subcarpetas para entrenamiento, validación y prueba.
 - **metadata/**: Incluye el archivo `metadata.csv` con información adicional sobre las imágenes.
 - **env/**: Entorno virtual de Python con las dependencias necesarias (por ejemplo, Pillow para manejo de imágenes).
+
+## Diagrama de Clases del Proyecto
+<center>
+<img src='https://i.ibb.co/pvRw6JdV/Diagrama-de-clases.png' width='50%'>
+</center>
 
 ## Instalación
 
