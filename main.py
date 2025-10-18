@@ -1,7 +1,7 @@
 """
 Módulo Principal de la Aplicación de Gestión de Imágenes Médicas.
 
-Este módulo contiene la clase `AplicacionGUI`, que construye y gestiona la
+Este módulo contiene la llamada a la clase `AplicacionGUI`, que construye y gestiona la
 interfaz gráfica de usuario (GUI) utilizando Tkinter. Actúa como la "Vista"
 en una arquitectura Modelo-Vista-Controlador (MVC), interactuando con el
 "Controlador" (`GestorImagenes`) para presentar y manipular los datos.
