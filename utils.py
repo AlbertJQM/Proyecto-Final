@@ -110,3 +110,39 @@ def copiar_archivo(ruta_origen: Path, ruta_destino: Path):
         print(f"Archivo copiado de '{ruta_origen}' a '{ruta_destino}'")
     except IOError as e:
         print(f"Error al copiar el archivo: {e}")
+
+def verificar_duplicados_dataset(ruta_origen: Path, ruta_destino: Path):
+    """
+    Verifica si existe alguna imagen duplicada en alguno de los directorios
+    de dataset en el proyecto. Esto se ejecuta después de modificar los datos
+    de una imagen, para evitar que queden copias innecesarias en las carpetas
+    de imágenes.
+
+    Args:
+        ruta_origen (Path): Ruta del archivo a copiar.
+        ruta_destino (Path): Ruta donde se guardará la copia.
+    """
+    try:
+        # Resolvemos rutas absolutas
+        ruta_origen_res = ruta_origen.resolve()
+        ruta_destino_res = ruta_destino.resolve()
+        dataset_root = config.RUTA_DATASET.resolve()
+
+        # Comprobamos si ambas rutas están dentro de la carpeta del dataset
+        moved_within_dataset = True
+        try:
+            ruta_origen_res.relative_to(dataset_root)
+            ruta_destino_res.relative_to(dataset_root)
+        except Exception:
+            moved_within_dataset = False
+
+        # Si ambas están dentro del dataset y son diferentes, eliminar el original para evitar duplicados
+        if moved_within_dataset and ruta_origen_res != ruta_destino_res:
+            if ruta_origen_res.exists():
+                try:
+                    ruta_origen_res.unlink()
+                    print(f"Eliminado archivo original: {ruta_origen_res}")
+                except OSError as e:
+                    print(f"No se pudo eliminar el archivo original '{ruta_origen_res}': {e}")
+    except Exception as e:
+        print(f"Error al verificar/limpiar duplicados en dataset: {e}")
