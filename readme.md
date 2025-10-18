@@ -20,6 +20,8 @@ Este proyecto es una aplicación de escritorio desarrollada en Python que permit
 - **env/**: Entorno virtual de Python con las dependencias necesarias (por ejemplo, Pillow para manejo de imágenes).
 
 ## Diagrama de Clases del Proyecto
+
+Enlace del diagrama: https://i.ibb.co/pvRw6JdV/Diagrama-de-clases.png
 <center>
 <img src='https://i.ibb.co/pvRw6JdV/Diagrama-de-clases.png' width='50%'>
 </center>
