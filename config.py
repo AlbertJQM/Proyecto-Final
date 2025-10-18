@@ -50,5 +50,8 @@ CABECERAS_CSV = [
     "fecha_adquisicion",
     "diagnostico",
     "conjunto_datos",
-    "dimensiones"
+    "Fovea_X",
+    "Fovea_Y",
+    "Size_X",
+    "Size_Y"
 ]
